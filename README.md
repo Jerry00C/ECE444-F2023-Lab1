@@ -14,3 +14,6 @@ Hello World
 
 Hello User
 ![](screenshots/assignment2HelloUser.png)
+
+##Activity 3
+![](screenshots/assignment3.png)

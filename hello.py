@@ -24,7 +24,6 @@ bootstrap = Bootstrap(app)
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    print(session.get('name'))
     name = None
     form = NameForm()
     if form.validate_on_submit():

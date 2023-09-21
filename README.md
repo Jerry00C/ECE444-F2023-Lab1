@@ -23,3 +23,4 @@ Hello User
 ![](screenshots/activity4UserPageInitInput.png)
 ![](screenshots/activity4UserPageInvalidEmail.png)
 ![](screenshots/activity4UserPageNewInput.png)
+![](activity4UserPageNonUofTEmail.png)

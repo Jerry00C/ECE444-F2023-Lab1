@@ -6,9 +6,14 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, EmailField
 from wtforms.validators import DataRequired, Email, ValidationError
 
+def custom_validator(form, field):
+    if 'utoronto' not in field.data:
+        raise ValidationError('Please enter UofT email')
+
+
 class NameForm(FlaskForm):
     name = StringField('What is your name', validators=[DataRequired()])
-    email = EmailField('What is your UofT Email address', validators=[DataRequired(), Email()])
+    email = EmailField('What is your UofT Email address', validators=[DataRequired(), Email(), custom_validator])
     submit = SubmitField('Submit')
 
 app = Flask(__name__)

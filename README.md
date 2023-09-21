@@ -5,15 +5,21 @@
 This repo is a clone of https://github.com/miguelgrinberg/flasky.
 
 ##Activity 1
-![](screenshots/assignment1.png)
+![](screenshots/activity1.png)
 
 
 ##Activity 2
 Hello World
-![](screenshots/assignment2HelloWorld.png)
+![](screenshots/activity2HelloWorld.png)
 
 Hello User
-![](screenshots/assignment2HelloUser.png)
+![](screenshots/activity2HelloUser.png)
 
 ##Activity 3
-![](screenshots/assignment3.png)
+![](screenshots/activity3.png)
+
+##Activity 4
+![](screenshots/activity4UserPage.png)
+![](screenshots/activity4UserPageInitInput.png)
+![](screenshots/activity4UserPageInvalidEmail.png)
+![](screenshots/activity4UserPageNewInput.png)

@@ -8,6 +8,7 @@ from wtforms.validators import DataRequired, Email, ValidationError
 
 def custom_validator(form, field):
     if 'utoronto' not in field.data:
+        session['uOfTInvalide'] = True
         raise ValidationError('Please enter UofT email')
 
 
@@ -26,6 +27,7 @@ bootstrap = Bootstrap(app)
 def index():
     name = None
     form = NameForm()
+    session['uOfTInvalide'] = False
     if form.validate_on_submit():
         old_info = session.get('info')
         if old_info and old_info['name'] is not None and old_info['name'] != form.name.data:
@@ -37,7 +39,7 @@ def index():
             'email': form.email.data,
         }
         return redirect(url_for('index'))
-    return render_template('index.html', form=form, formInfo=session.get('info'))
+    return render_template('index.html', form=form, formInfo=session.get('info'), uOfTInvalide=session.get('uOfTInvalide'))
 
 
 @app.route('/user/<name>')
